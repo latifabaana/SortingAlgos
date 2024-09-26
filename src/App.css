@@ -1,0 +1,81 @@
+#root {
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: row;
+  width: 30vw;
+}
+
+button{
+  margin-top: 20px;
+}
+
+.container {
+  height: 30vh;
+  width: 20vw;
+  /* background-color: pink; */
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 20px;
+}
+
+.counting-container{
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  /* background-color: yellow; */
+  /* justify-content: space-evenly; */
+}
+
+.counting-sort-button{
+  /* height: 20vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-array-container {
+  width: 20vw;
+  height: 30vh;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* padding-bottom: 20px; */
+  /* background-color: blue; */
+}
+
+.newArray{
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
