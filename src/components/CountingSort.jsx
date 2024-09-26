@@ -73,14 +73,15 @@ function CountingSort({generatedArray}) {
             return arr})
     }
     
-    function innerLoopTimer(arr, new_arr, count,i){
+    function innerLoopTimer(arr, new_arr, count,i){ //don't need count here
         return new Promise((resolve) => {
             // setNewArray(prevArray => prevArray.slice(1))
             let innerLoop = ()=>{
-                console.log('count = ' + count)
+                // console.log('count = ' + count)
                 console.log('new array i = ' + new_arr[i])
-                if(count<new_arr[i]){
+                if(new_arr[i]>0){
                     console.log("j = " + j)
+                    // console.log('count = '+ count)
                     setOriginalArray(prevArray => ([
                         ...prevArray.slice(0, j),
                         // New item:
@@ -90,15 +91,18 @@ function CountingSort({generatedArray}) {
                     ]))
                     arr[j] = i
                     j++
-                    count++
+                    // count++
                     console.log("i = "+ i)
                     // setNewArray(prevArray => [...prevArray.slice(1)])
-                    setNewArray(prevArray => [...prevArray.slice(0,i), prevArray[i]--, ...prevArray.slice(i+1)])
+                    new_arr[i]--
+                    // setNewArray(prevArray => [...prevArray.slice(0,i), prevArray[i]--, ...prevArray.slice(i+1)])
+                    setNewArray(new_arr)
                     // setChanged(prevChanged => !prevChanged)
-                }else{
-                    // setNewArray(prevArray => [...prevArray.slice(1)])
                 }
-                if(count<new_arr[i])setTimeout(innerLoop, 1000)
+                // else{
+                    // setNewArray(prevArray => [...prevArray.slice(1)])
+                // }
+                if(new_arr[i]>0)setTimeout(innerLoop, 1000)
                 else resolve("finished inner loop")
             }
             innerLoop()
